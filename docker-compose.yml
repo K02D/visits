@@ -1,0 +1,9 @@
+version: '3' # docker-compose version
+services:
+  redis-server:
+    image: redis
+  node-app:
+    restart: always # always restart the container when it stops for any reason
+    build: . # look in the current directory for a Dockerfile
+    ports:
+     - "4001:8081" 
